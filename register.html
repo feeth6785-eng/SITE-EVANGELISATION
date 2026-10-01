@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Créer un compte | WINNER CHAPEL COCOTOMEY
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="login-page">
+
+
+    <main class="login-container">
+
+
+        <div class="login-card">
+
+
+            <!-- ================= LOGO ================= -->
+
+            <div class="login-logo">
+
+                <div class="login-cross">
+                    ✝
+                </div>
+
+                <h1>
+                    WINNER CHAPEL
+                </h1>
+
+                <p>
+                    COCOTOMEY
+                </p>
+
+                <span>
+                    CHAPELLE INTERNATIONALE DES VAINQUEURS
+                </span>
+
+            </div>
+
+
+            <!-- ================= TITRE ================= -->
+
+            <div class="login-title">
+
+                <h2>
+                    Créer un compte
+                </h2>
+
+                <p>
+                    Créez votre compte d'évangéliste.
+                </p>
+
+            </div>
+
+
+            <!-- ================= FORMULAIRE ================= -->
+
+            <form id="registerForm">
+
+
+                <!-- PRÉNOM -->
+
+                <div class="form-group">
+
+                    <label for="registerFirstName">
+                        Prénom *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerFirstName"
+                        name="firstName"
+                        placeholder="Votre prénom"
+                        autocomplete="given-name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- NOM -->
+
+                <div class="form-group">
+
+                    <label for="registerLastName">
+                        Nom *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerLastName"
+                        name="lastName"
+                        placeholder="Votre nom"
+                        autocomplete="family-name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TÉLÉPHONE -->
+
+                <div class="form-group">
+
+                    <label for="registerPhone">
+                        Téléphone *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="registerPhone"
+                        name="phone"
+                        placeholder="Ex : 97 00 00 00"
+                        autocomplete="tel"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="registerEmail">
+                        Adresse email *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        name="email"
+                        placeholder="exemple@email.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- NOM UTILISATEUR -->
+
+                <div class="form-group">
+
+                    <label for="registerUsername">
+                        Nom d'utilisateur *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        name="username"
+                        placeholder="Choisissez un nom d'utilisateur"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MOT DE PASSE -->
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Mot de passe *
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        name="password"
+                        placeholder="Minimum 6 caractères"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONFIRMATION -->
+
+                <div class="form-group">
+
+                    <label for="registerPasswordConfirm">
+                        Confirmer le mot de passe *
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPasswordConfirm"
+                        name="passwordConfirm"
+                        placeholder="Répétez votre mot de passe"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="registerMessage"
+                    class="login-message"
+                    style="display: none;"
+                ></div>
+
+
+                <!-- BOUTON -->
+
+                <button
+                    type="submit"
+                    class="btn btn-primary login-button"
+                >
+                    ✚ Créer mon compte
+                </button>
+
+
+            </form>
+
+
+            <!-- ================= LIENS ================= -->
+
+            <div class="login-footer">
+
+                <p>
+                    Vous avez déjà un compte ?
+                </p>
+
+                <a href="login.html">
+                    🔐 Se connecter
+                </a>
+
+                <br>
+                <br>
+
+                <a href="index.html">
+                    ← Retour à l'accueil
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="java.js"></script>
+
+</body>
+
+</html>

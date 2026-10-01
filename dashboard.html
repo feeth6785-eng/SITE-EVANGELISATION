@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tableau de bord | WINNER CHAPEL COCOTOMEY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header dashboard-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-main">WINNER CHAPEL</span>
+                <span class="logo-sub">COCOTOMEY</span>
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="dashboard.html" class="active">
+                    Tableau de bord
+                </a>
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                    class="btn btn-outline logout-button">
+                    Déconnexion
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTENU ================= -->
+    <main id="dashboardPage">
+
+        <!-- HERO -->
+        <section class="dashboard-hero">
+
+            <div class="container">
+
+                <div class="dashboard-welcome">
+
+                    <div>
+                        <span class="dashboard-label">
+                            ESPACE ÉVANGÉLISATION
+                        </span>
+
+                        <h1>
+                            Tableau de bord
+                        </h1>
+
+                        <p id="welcomeUser">
+                            Bienvenue 👋
+                        </p>
+                    </div>
+
+                    <div class="dashboard-cross">
+                        ✝
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROFIL ================= -->
+        <section class="dashboard-section profile-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>MON ESPACE</span>
+                    <h2>Mon profil</h2>
+                    <p>
+                        Informations de l'évangéliste actuellement connecté.
+                    </p>
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="profile-avatar">
+                        👤
+                    </div>
+
+                    <div class="profile-information">
+
+                        <h3 class="current-user-name">
+                            Évangéliste
+                        </h3>
+
+                        <p>
+                            <strong>Nom d'utilisateur :</strong>
+                            <span class="current-username">
+                                —
+                            </span>
+                        </p>
+
+                        <p>
+                            <strong>Rôle :</strong>
+                            Évangéliste
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTIQUES ================= -->
+        <section class="dashboard-section statistics-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>STATISTIQUES</span>
+                    <h2>Vue d'ensemble</h2>
+                    <p>
+                        Suivez votre activité d'évangélisation.
+                    </p>
+                </div>
+
+
+                <div class="dashboard-stats">
+
+                    <!-- TOTAL -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            👥
+                        </div>
+
+                        <div class="stat-content">
+                            <span>Total</span>
+
+                            <strong id="totalPeople">
+                                0
+                            </strong>
+
+                            <small>
+                                Personnes enregistrées
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOUVEAUX -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            🆕
+                        </div>
+
+                        <div class="stat-content">
+                            <span>Nouveaux</span>
+
+                            <strong id="newPeople">
+                                0
+                            </strong>
+
+                            <small>
+                                Nouvelles rencontres
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- À CONTACTER -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📞
+                        </div>
+
+                        <div class="stat-content">
+                            <span>À contacter</span>
+
+                            <strong id="toContactPeople">
+                                0
+                            </strong>
+
+                            <small>
+                                Suivis à effectuer
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- INTÉGRÉS -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            ⛪
+                        </div>
+
+                        <div class="stat-content">
+                            <span>Intégrés</span>
+
+                            <strong id="integratedPeople">
+                                0
+                            </strong>
+
+                            <small>
+                                Personnes intégrées
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ENREGISTREMENT ================= -->
+        <section class="dashboard-section evangelisation-management">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>ÉVANGÉLISATION</span>
+
+                    <h2>
+                        Enregistrer une personne
+                    </h2>
+
+                    <p>
+                        Ajoutez les informations nécessaires pour assurer
+                        un bon suivi.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <form id="evangelisationForm">
+
+                        <!-- ID POUR MODIFICATION -->
+                        <input
+                            type="hidden"
+                            id="editId"
+                            name="editId"
+                        >
+
+
+                        <!-- ================= INFORMATIONS PERSONNELLES ================= -->
+
+                        <div class="form-section-title">
+
+                            <span>01</span>
+
+                            <div>
+                                <h3>
+                                    Informations personnelles
+                                </h3>
+
+                                <p>
+                                    Informations de base de la personne rencontrée.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="firstName">
+                                    Prénom *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="Ex : Jean"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lastName">
+                                    Nom
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    placeholder="Ex : Koffi"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Téléphone *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Ex : 97 00 00 00"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="gender">
+                                    Sexe
+                                </label>
+
+                                <select
+                                    id="gender"
+                                    name="gender"
+                                >
+
+                                    <option value="">
+                                        Sélectionner
+                                    </option>
+
+                                    <option value="Homme">
+                                        Homme
+                                    </option>
+
+                                    <option value="Femme">
+                                        Femme
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="age">
+                                    Âge
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="age"
+                                    name="age"
+                                    min="1"
+                                    max="120"
+                                    placeholder="Ex : 25"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="neighborhood">
+                                    Quartier / lieu
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="neighborhood"
+                                    name="neighborhood"
+                                    placeholder="Ex : Cocotomey"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= RENCONTRE ================= -->
+
+                        <div class="form-section-title">
+
+                            <span>02</span>
+
+                            <div>
+
+                                <h3>
+                                    Rencontre
+                                </h3>
+
+                                <p>
+                                    Où et quand la personne a été rencontrée.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="meetingDate">
+                                    Date de rencontre *
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="meetingDate"
+                                    name="meetingDate"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="meetingPlace">
+                                    Lieu de rencontre
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="meetingPlace"
+                                    name="meetingPlace"
+                                    placeholder="Ex : Maison, rue, marché..."
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="evangelist">
+                                    Évangéliste
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="evangelist"
+                                    name="evangelist"
+                                    placeholder="Nom de l'évangéliste"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= VIE SPIRITUELLE ================= -->
+
+                        <div class="form-section-title">
+
+                            <span>03</span>
+
+                            <div>
+
+                                <h3>
+                                    Situation spirituelle
+                                </h3>
+
+                                <p>
+                                    Informations concernant la décision et la fréquentation de l'église.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="acceptedJesus">
+                                    A-t-elle accepté Jésus ?
+                                </label>
+
+                                <select
+                                    id="acceptedJesus"
+                                    name="acceptedJesus"
+                                >
+
+                                    <option value="">
+                                        Sélectionner
+                                    </option>
+
+                                    <option value="Oui">
+                                        Oui
+                                    </option>
+
+                                    <option value="Non">
+                                        Non
+                                    </option>
+
+                                    <option value="Souhaite réfléchir">
+                                        Souhaite réfléchir
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="attendedChurch">
+                                    A-t-elle déjà fréquenté une église ?
+                                </label>
+
+                                <select
+                                    id="attendedChurch"
+                                    name="attendedChurch"
+                                >
+
+                                    <option value="">
+                                        Sélectionner
+                                    </option>
+
+                                    <option value="Oui">
+                                        Oui
+                                    </option>
+
+                                    <option value="Non">
+                                        Non
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="followUp">
+                                    Besoin de suivi ?
+                                </label>
+
+                                <select
+                                    id="followUp"
+                                    name="followUp"
+                                >
+
+                                    <option value="">
+                                        Sélectionner
+                                    </option>
+
+                                    <option value="Oui">
+                                        Oui
+                                    </option>
+
+                                    <option value="Non">
+                                        Non
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="status">
+                                    Statut *
+                                </label>
+
+                                <select
+                                    id="status"
+                                    name="status"
+                                    required
+                                >
+
+                                    <option value="Nouveau">
+                                        Nouveau
+                                    </option>
+
+                                    <option value="À contacter">
+                                        À contacter
+                                    </option>
+
+                                    <option value="Contacté">
+                                        Contacté
+                                    </option>
+
+                                    <option value="Invité">
+                                        Invité
+                                    </option>
+
+                                    <option value="Venu au culte">
+                                        Venu au culte
+                                    </option>
+
+                                    <option value="Intégré">
+                                        Intégré
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= NOTES ================= -->
+
+                        <div class="form-section-title">
+
+                            <span>04</span>
+
+                            <div>
+
+                                <h3>
+                                    Notes et observations
+                                </h3>
+
+                                <p>
+                                    Ajoutez les informations importantes pour le suivi.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group full-width">
+
+                            <label for="notes">
+                                Notes / observations
+                            </label>
+
+                            <textarea
+                                id="notes"
+                                name="notes"
+                                rows="5"
+                                placeholder="Écrivez ici les informations utiles concernant cette personne..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+                        <div
+                            id="formMessage"
+                            class="form-message"
+                            style="display: none;">
+                        </div>
+
+
+                        <!-- ACTIONS -->
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                id="savePersonButton"
+                                class="btn btn-primary">
+
+                                ➕ Enregistrer la personne
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                id="cancelEditButton"
+                                class="btn btn-outline"
+                                style="display: none;">
+
+                                Annuler la modification
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LISTE ================= -->
+        <section class="dashboard-section people-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>BASE DE DONNÉES</span>
+
+                    <h2>
+                        Personnes rencontrées
+                    </h2>
+
+                    <p>
+                        Retrouvez et gérez toutes les personnes enregistrées
+                        par l'équipe d'évangélisation.
+                    </p>
+
+                </div>
+
+
+                <!-- RECHERCHE -->
+                <div class="people-tools">
+
+                    <div class="search-box">
+
+                        <span>
+                            🔎
+                        </span>
+
+                        <input
+                            type="search"
+                            id="searchPeople"
+                            placeholder="Rechercher par nom, téléphone, quartier..."
+                        >
+
+                    </div>
+
+
+                    <div class="filter-box">
+
+                        <label for="filterStatus">
+                            Filtrer :
+                        </label>
+
+                        <select id="filterStatus">
+
+                            <option value="all">
+                                Tous les statuts
+                            </option>
+
+                            <option value="Nouveau">
+                                Nouveau
+                            </option>
+
+                            <option value="À contacter">
+                                À contacter
+                            </option>
+
+                            <option value="Contacté">
+                                Contacté
+                            </option>
+
+                            <option value="Invité">
+                                Invité
+                            </option>
+
+                            <option value="Venu au culte">
+                                Venu au culte
+                            </option>
+
+                            <option value="Intégré">
+                                Intégré
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LISTE DES PERSONNES -->
+                <div
+                    id="peopleList"
+                    class="people-list">
+
+                    <div class="empty-state">
+
+                        <div class="empty-state-icon">
+                            👥
+                        </div>
+
+                        <h3>
+                            Aucune personne enregistrée
+                        </h3>
+
+                        <p>
+                            Commencez par enregistrer votre première personne rencontrée.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer dashboard-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <h3>
+                        WINNER CHAPEL COCOTOMEY
+                    </h3>
+
+                    <p>
+                        Chapelle Internationale des Vainqueurs
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        © <span id="currentYear"></span>
+                        WINNER CHAPEL COCOTOMEY
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="java.js"></script>
+
+</body>
+</html>
